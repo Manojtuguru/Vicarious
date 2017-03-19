@@ -1,4 +1,4 @@
-                                                                       Vicarious Coding Challenge
+                                    Vicarious Coding Challenge
 
 Running the application
 1.	Clone the GIT repository to your local through GIT clone or downloading as a Zip file
