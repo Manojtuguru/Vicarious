@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import cgi
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
-PORT_NUMBER = 8000 
+PORT_NUMBER = 80 
 class myHandler(BaseHTTPRequestHandler):
 	def do_GET(self):
 		self.send_response(200)
@@ -23,18 +23,14 @@ class myHandler(BaseHTTPRequestHandler):
 			PigLatin = ''
 			wordlist = words.split()
 			for i in wordlist:
-				print i
 				if i[0] in 'aeiou' or i[0] in 'AEIOU':
-					print "inside vowel {}".format(i[0])
 					temp = ''.join([i,'yay'])
 					LatinWords.append(temp)
 				else:
 					vowel=0
 					for j in range(len(i)):
-						print i[j]
 						if i[j] in'aeiou' or i[j] in "AEIOU":
 							vowel=1
-							print "inside consonant {}".format(i[j])
 							temp = ''.join([i[j:],i[:j],'ay'])
 							LatinWords.append(temp)
 							break
